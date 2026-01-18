@@ -45,22 +45,3 @@ Example:
 python main.py --execution_id "3e5d887f-3838-46f4-be1a-bcef4aaaee51"
 ```
 
-Notes:
-- The `--execution_id` argument is required to fetch a specific conversation run.
-- If the project requires additional flags (e.g., `--output` or log level), run `python main.py --help` to see available options.
-
-## Output
-- `extracted_data.csv` will contain one or more new rows corresponding to the fetched conversation. Column names and ordering are defined by the parsing logic in `src/parsers.py`.
-
-## Development
-- Inspect and modify extraction rules in `src/extractor.py`.
-- Update field parsing and normalization in `src/parsers.py`.
-- For Bolna-specific API calls, see `src/bolna_api.py` and `src/config.py` for endpoints and credentials.
-
-## Troubleshooting
-- If fetching fails, ensure API credentials and endpoints in `src/config.py` are correct and network access is available.
-- If `extracted_data.csv` does not update, check for exceptions printed to console and run with increased logging.
-- Use `python main.py --help` for CLI options and usage.
-
-## License & Contact
-Add a license if you plan to share this repository. For questions about this project, contact the repository owner.
